@@ -1,5 +1,7 @@
 # GSettings Array Manipulator
 
+[![Codecov](https://img.shields.io/codecov/c/github/rindeal/gsettings-array)](https://app.codecov.io/github/rindeal/gsettings-array/blob/master/gsettings_array.py)
+
 Welcome to the **GSettings Array Manipulator**, a powerful command-line tool designed to simplify and streamline your interactions with GSettings arrays. With this tool, you can perform a variety of tasks, from inserting items into an array to sorting and deduplicating items, all with a few simple commands.
 
 ## Features

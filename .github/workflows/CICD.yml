@@ -1,0 +1,102 @@
+name: Test, Lint, and Publish
+
+on:
+  push:
+    branches: [ "master" ]
+    tags:
+      - 'v*'
+  pull_request:
+    branches: [ "master" ]
+
+jobs:
+  test-and-lint:
+    name: Test and Lint
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        python-version: ["3.11", "3.12"]
+
+    steps:
+    - name: Clone repository
+      uses: actions/checkout@main
+
+    - name: Setup dependencies
+      uses: ./.github/actions/setup-dependencies
+      with:
+        python-version: ${{ matrix.python-version }} 
+
+    - name: Run tests with pytest
+      id: pytest
+      run: poetry run -- pytest --color=yes --cov=${{ vars.PACKAGE_NAME }} --cov-report=xml --cov-branch
+      continue-on-error: true
+
+    - name: Run Ruff
+      id: ruff
+      run: poetry run -- ruff check --output-format=github .
+      continue-on-error: true
+
+    - name: Run Pyright
+      id: pyright
+      run: poetry run -- pyright . || true
+      continue-on-error: true
+
+    - name: Run mypy
+      id: mypy
+      run: poetry run -- mypy . || true
+      continue-on-error: true
+
+    - name: Run reuse
+      id: reuse
+      run: poetry run -- reuse lint
+      continue-on-error: true
+
+    - name: Check for test or lint failures
+      shell: python
+      run: |
+        import json, os, sys
+        steps = json.loads(os.environ['STEPS_CONTEXT'])
+        failed = False
+        for sid in steps:
+            if steps[sid]['outcome'] == 'failure':
+                failed = True
+                print(f"::error title={sid}::Step '{sid}' failed", flush=True)
+        if failed:
+          sys.exit(1)
+      env:
+        STEPS_CONTEXT: ${{ toJSON(steps) }}
+
+    - name: Upload coverage to Codecov
+      uses: codecov/codecov-action@main
+      with:
+        verbose: true
+        token: ${{ secrets.CODECOV_TOKEN }}
+
+  publish-pypi:
+    name: Publish to PyPI
+    needs: test-and-lint
+    if: github.event_name == 'push' && startsWith(github.ref, 'refs/tags/v')
+    runs-on: ubuntu-latest
+    permissions:
+      id-token: write  # IMPORTANT: this permission is mandatory for trusted publishing
+    environment:
+      name: pypi
+      url: https://pypi.org/p/gsettings-array
+
+    steps:
+    - uses: actions/checkout@main
+
+    - name: Setup dependencies
+      uses: ./.github/actions/setup-dependencies
+
+    - name: Update metadata
+      run: poetry run -- ./.github/scripts/update-metadata.py ${{ github.ref_name }}
+
+    - name: Build package
+      run: poetry build
+
+    - name: Publish package distributions to PyPI
+      uses: pypa/gh-action-pypi-publish@release/v1
+      with:
+        verbose: true
+        print-hash: true
+        # Note: no token input needed due to OIDC usage

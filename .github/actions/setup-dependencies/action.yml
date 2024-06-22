@@ -1,0 +1,38 @@
+name: 'Setup dependencies'
+description: 'Set up Python and Poetry with system dependencies'
+
+inputs:
+  python-version:
+    description: 'Python version to set up'
+    required: true
+    default: '3.11'
+
+outputs:
+  cache-hit:
+    description: 'Indicates whether there was a cache hit for Poetry dependencies'
+    value: ${{ steps.python-and-poetry.outputs.cache-hit }}
+
+runs:
+  using: "composite"
+  steps:
+    - name: Setup Python and Poetry
+      id: python-and-poetry
+      uses: actions-rindeal/setup-poetry@master
+      with:
+        python-version: ${{ inputs.python-version }}
+
+    - name: Install system dependencies
+      if: steps.python-and-poetry.outputs.cache-hit != 'true'
+      shell: bash
+      run: |
+        # Install deb packages
+        apt_pkgs=(
+          # deps for PyGObject
+          libgirepository1.0-dev
+        )
+        time sudo apt-get -y install "${apt_pkgs[@]}"
+
+    - name: Install dependencies using poetry
+      if: steps.python-and-poetry.outputs.cache-hit != 'true'
+      shell: bash
+      run: time poetry install --ansi --no-interaction --no-root
