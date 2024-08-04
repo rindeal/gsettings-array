@@ -1,14 +1,27 @@
-# GSettings Array Utility
+<h1 align="center">GSettings Array Utility</h1>
 
-![PyPI - Version](https://img.shields.io/pypi/v/gsettings-array)
-![PyPI - Python Version](https://img.shields.io/pypi/pyversions/gsettings-array)
-![GitHub branch check runs](https://img.shields.io/github/check-runs/rindeal/gsettings-array/master)
-[![Codecov](https://img.shields.io/codecov/c/github/rindeal/gsettings-array)](https://app.codecov.io/github/rindeal/gsettings-array/blob/master/gsettings_array.py)
-![PyPI - Downloads](https://img.shields.io/pypi/dm/gsettings-array)
-![GitHub commit activity (branch)](https://img.shields.io/github/commit-activity/y/rindeal/gsettings-array/master)
+<p align="center">
+  <strong>
+    A powerful CLI tool to simplify and streamline your interactions with GSettings arrays.
+  </strong>
+</p>
 
-Welcome to the **GSettings Array Utility**, a powerful command-line tool designed to simplify and streamline your interactions with GSettings arrays.
-With this tool, you can perform a variety of tasks, from inserting items into an array to sorting and deduplicating items, all with a few simple commands.
+<p align="center">
+  <img src="https://img.shields.io/pypi/v/gsettings-array" alt="PyPI - Version">
+  <img src="https://img.shields.io/pypi/pyversions/gsettings-array" alt="PyPI - Python Version">
+  <img src="https://img.shields.io/github/check-runs/rindeal/gsettings-array/master" alt="GitHub branch check runs">
+  <a href="https://app.codecov.io/github/rindeal/gsettings-array/blob/master/gsettings_array.py"><img
+    src="https://img.shields.io/codecov/c/github/rindeal/gsettings-array"
+    alt="Codecov"
+  /></a>
+  <img src="https://img.shields.io/pypi/dm/gsettings-array" alt="PyPI - Downloads">
+  <img src="https://img.shields.io/github/commit-activity/y/rindeal/gsettings-array/master" alt="GitHub commit activity (branch)">
+</p>
+
+<p align="center">
+  Welcome to the <strong>GSettings Array Utility</strong>, a powerful command-line tool designed to simplify and streamline your interactions with GSettings arrays.
+  With this tool, you can perform a variety of tasks, from inserting items into an array to sorting and deduplicating items, all with a few simple commands.
+</p>
 
 ## Features
 
