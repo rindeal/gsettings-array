@@ -1,0 +1,23 @@
+site_name: GSettings Array Utility
+site_url: https://rindeal.github.io/gsettings-array/
+repo_url: https://github.com/rindeal/gsettings-array
+theme:
+  name: material
+  palette:
+    primary: indigo
+nav:
+  - Home: index.md
+  - Installation: installation.md
+  - Usage: usage.md
+  - Commands:
+    - Insert: commands/insert.md
+    - List: commands/list.md
+    - Sort: commands/sort.md
+    - Deduplicate: commands/deduplicate.md
+    - Pop: commands/pop.md
+    - Remove: commands/remove.md
+    - Clear: commands/clear.md
+  - GSettings Types: gsettings-types.md
+markdown_extensions:
+  - pymdownx.highlight
+  - pymdownx.superfences
