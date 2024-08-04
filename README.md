@@ -7,15 +7,30 @@
 </p>
 
 <p align="center">
-  <img src="https://img.shields.io/pypi/v/gsettings-array" alt="PyPI - Version">
-  <img src="https://img.shields.io/pypi/pyversions/gsettings-array" alt="PyPI - Python Version">
-  <img src="https://img.shields.io/github/check-runs/rindeal/gsettings-array/master" alt="GitHub branch check runs">
+  <a href="https://github.com/rindeal/gsettings-array/actions"><img
+    src="https://img.shields.io/github/check-runs/rindeal/gsettings-array/master"
+    alt="Build"
+  /></a>
+  <a href="https://pypistats.org/packages/gsettings-array"><img
+    src="https://img.shields.io/pypi/dm/gsettings-array.svg"
+    alt="Downloads"
+  /></a>
+  <a href="https://pypi.org/project/gsettings-array"><img
+    src="https://img.shields.io/pypi/v/gsettings-array.svg"
+    alt="Version"
+  /></a>
+  <a href="https://pypi.org/project/gsettings-array"><img
+    src="https://img.shields.io/pypi/pyversions/gsettings-array"
+    alt="Python versions"
+  /></a>
   <a href="https://app.codecov.io/github/rindeal/gsettings-array/blob/master/gsettings_array.py"><img
     src="https://img.shields.io/codecov/c/github/rindeal/gsettings-array"
     alt="Codecov"
   /></a>
-  <img src="https://img.shields.io/pypi/dm/gsettings-array" alt="PyPI - Downloads">
-  <img src="https://img.shields.io/github/commit-activity/y/rindeal/gsettings-array/master" alt="GitHub commit activity (branch)">
+  <a href="https://github.com/rindeal/gsettings-array/commits/master/"><img
+    src="https://img.shields.io/github/commit-activity/y/rindeal/gsettings-array/master"
+    alt="Commit activity"
+  /></a>
 </p>
 
 <p align="center">
