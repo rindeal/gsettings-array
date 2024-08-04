@@ -6,6 +6,9 @@ inputs:
     description: 'Python version to set up'
     required: true
     default: '3.11'
+  poetry-install-args:
+    description: 'Additional args for `poetry install` command'
+    required: false
 
 outputs:
   cache-hit:
@@ -35,4 +38,4 @@ runs:
     - name: Install dependencies using poetry
       if: steps.python-and-poetry.outputs.cache-hit != 'true'
       shell: bash
-      run: time poetry install --ansi --no-interaction --no-root
+      run: time poetry install --ansi --no-interaction --no-root ${{ inputs.poetry-install-args }}
