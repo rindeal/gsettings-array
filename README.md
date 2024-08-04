@@ -1,6 +1,12 @@
 # GSettings Array Manipulator
 
+![PyPI - Version](https://img.shields.io/pypi/v/gsettings-array)
+![PyPI - Python Version](https://img.shields.io/pypi/pyversions/gsettings-array)
+![GitHub branch check runs](https://img.shields.io/github/check-runs/rindeal/gsettings-array/master)
 [![Codecov](https://img.shields.io/codecov/c/github/rindeal/gsettings-array)](https://app.codecov.io/github/rindeal/gsettings-array/blob/master/gsettings_array.py)
+![GitHub deployments](https://img.shields.io/github/deployments/rindeal/gsettings-array/pypi?label=PyPI%20deploy)
+![PyPI - Downloads](https://img.shields.io/pypi/dm/gsettings-array)
+![GitHub commit activity (branch)](https://img.shields.io/github/commit-activity/y/rindeal/gsettings-array/master)
 
 Welcome to the **GSettings Array Manipulator**, a powerful command-line tool designed to simplify and streamline your interactions with GSettings arrays. With this tool, you can perform a variety of tasks, from inserting items into an array to sorting and deduplicating items, all with a few simple commands.
 
