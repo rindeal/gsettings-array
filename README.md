@@ -43,4 +43,4 @@ Contributions are welcome! Please feel free to submit a Pull Request.
 
 ## License
 
-See [LICENSE.md](./LICENSE.md) file.
+See the [LICENSE.md](./LICENSE.md) file.
