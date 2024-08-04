@@ -91,7 +91,7 @@ jobs:
     - name: Setup dependencies
       uses: ./.github/actions/setup-dependencies
       with:
-        poetry-install-args: '--only main'
+        poetry-install-args: '--only main,script-update-metadata'
 
     - name: Update metadata
       run: poetry run -- ./.github/scripts/update-metadata.py ${{ github.ref_name }}
