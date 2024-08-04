@@ -35,6 +35,8 @@ pygobject-stubs = "^2.11.0"
 pyright = "^1.1.374"
 ruff = "^0.5.6"
 mypy = "^1.11.1"
+
+[tool.poetry.group.reuse.dependencies]
 reuse = "^4.0.3"
 
 [tool.poetry.group.script-update-metadata.dependencies]
