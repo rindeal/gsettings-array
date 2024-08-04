@@ -1,0 +1,19 @@
+name: REUSE Compliance Check
+
+on:
+  push:
+    branches:
+      - '**'
+    tags:
+      - '**'
+  pull_request:
+    branches:
+      - '**'
+
+jobs:
+  reuse_lint:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@main
+    - name: REUSE Compliance Check
+      uses: fsfe/reuse-action@main
