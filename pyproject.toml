@@ -39,6 +39,10 @@ mypy = "^1.11.1"
 [tool.poetry.group.reuse.dependencies]
 reuse = "^4.0.3"
 
+[tool.poetry.group.docs.dependencies]
+mkdocs-material = "^9.5.31"
+
+# TODO: remove this group later after moving the script to a dedicated action
 [tool.poetry.group.script-update-metadata.dependencies]
 loguru = "^0.7.2"
 tomlkit = "^0.13.0"
