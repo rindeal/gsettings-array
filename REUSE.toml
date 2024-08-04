@@ -2,12 +2,11 @@ version = 1
 
 [[annotations]]
 path = [
-    ".devcontainer/*.json",
-    ".gitignore",
+    ".devcontainer/**/*.json",
+    "**/.gitignore",
     "**.lock",
-    "REUSE.toml",
-    "codecov.yml",
-    "pyproject.toml",
+    "*.toml",
+    "*.yml",
 ]
 precedence = "aggregate"
 SPDX-FileCopyrightText = "Public Domain"
