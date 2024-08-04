@@ -1,35 +1,35 @@
-## GSettings GVariant Value Types
+# GSettings GVariant Value Types
 
 > Official docs: https://docs.gtk.org/glib/gvariant-format-strings.html
 
 Each value type in GSettings has a unique representation. Here's how you can set different types of values in dconf:
 
-### String (`s`)
+## String (`s`)
 A string is a sequence of characters. 
 ```py
 'my-string-value'  # Example of a string
 ```
 
-### Boolean (`b`)
+## Boolean (`b`)
 A boolean represents a truth value and can be either `true` or `false`.
 ```py
 false  # Example of a boolean
 ```
 
-### Integer (`i`)
+## Integer (`i`)
 An integer is a number without a fractional component.
 ```py
 10  # Example of an integer
 ```
 
-### Array (`a`)
+## Array (`a`)
 An array is an ordered collection of values.
 ```py
 ['foo', 'bar', 'baz']  # Example of an array of strings (`as`)
 [10, 20, 30]  # Example of an array of integers (`ai`)
 ```
 
-### Tuple (`(ss)`, `(si)`, `(sib)`, `(s(is))`, etc.)
+## Tuple (`(ss)`, `(si)`, `(sib)`, `(s(is))`, etc.)
 A tuple is an ordered collection of values that may have different types.
 ```py
 ('my-string', 10)  # Example of a tuple consisting of a string and an integer (`si`)
