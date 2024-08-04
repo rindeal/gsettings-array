@@ -12,13 +12,13 @@ With this tool, you can perform a variety of tasks, from inserting items into an
 
 ## Features
 
-- **Insert**: Add one or more items to your array at a specified index.
-- **List**: Display all items in your array, each on a new line.
-- **Sort**: Sort all items in your array.
-- **Deduplicate**: Remove duplicate items from your array.
-- **Pop**: Print and remove the item at a specified index.
-- **Remove**: Delete one or more items from your array.
-- **Clear**: Remove all items from your array.
+- 🎯 **Insert**: Add one or more items to your array at a specified index.
+- 📋 **List**: Display all items in your array, each on a new line.
+- 🔄 **Sort**: Sort all items in your array.
+- 🧹 **Deduplicate**: Remove duplicate items from your array.
+- 🎣 **Pop**: Print and remove the item at a specified index.
+- ❌ **Remove**: Delete one or more items from your array.
+- 🧼 **Clear**: Remove all items from your array.
 
 ## Quick Start
 
