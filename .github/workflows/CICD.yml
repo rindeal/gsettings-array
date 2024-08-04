@@ -30,7 +30,8 @@ jobs:
     - name: Setup dependencies
       uses: ./.github/actions/setup-dependencies
       with:
-        python-version: ${{ matrix.python-version }} 
+        python-version: ${{ matrix.python-version }}
+        poetry-install-args: '--only main,test,lint'
 
     - name: Run tests with pytest
       id: pytest
