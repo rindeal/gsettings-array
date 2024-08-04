@@ -10,6 +10,8 @@ on:
       - 'LICENSES/**'
       - '*.md'
       - '.devcontainer/**'
+      - mkdocs.yml
+      - REUSE.toml
   pull_request:
     branches: [ "master" ]
 
@@ -48,11 +50,6 @@ jobs:
     - name: Run mypy
       id: mypy
       run: poetry run -- mypy . || true
-      continue-on-error: true
-
-    - name: Run reuse
-      id: reuse
-      run: poetry run -- reuse lint
       continue-on-error: true
 
     - name: Check for test or lint failures
