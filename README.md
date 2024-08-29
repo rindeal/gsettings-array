@@ -34,7 +34,6 @@
 </p>
 
 <p align="center">
-  Welcome to the <strong>GSettings Array Utility</strong>, a powerful command-line tool designed to simplify and streamline your interactions with GSettings arrays.
   With this tool, you can perform a variety of tasks, from inserting items into an array to sorting and deduplicating items, all with a few simple commands.
 </p>
 
