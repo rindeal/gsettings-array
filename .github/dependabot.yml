@@ -4,17 +4,29 @@
 
 version: 2
 updates:
- - package-ecosystem: devcontainers
-   directory: "/"
-   schedule:
-     interval: monthly
+  - package-ecosystem: devcontainers
+    directory: "/"
+    schedule:
+      interval: monthly
+    groups:
+      all-devcontainers:
+        patterns:
+          - "*"
 
- - package-ecosystem: github-actions
-   directory: "/"
-   schedule:
-     interval: monthly
+  - package-ecosystem: github-actions
+    directory: "/"
+    schedule:
+      interval: monthly
+    groups:
+      all-github-actions:
+        patterns:
+          - "*"
 
- - package-ecosystem: pip  # `pip` ecosystem covers `poetry` as well
-   directory: "/"
-   schedule:
-     interval: monthly
+  - package-ecosystem: pip  # `pip` ecosystem covers `poetry` as well
+    directory: "/"
+    schedule:
+      interval: monthly
+    groups:
+      all-pip:
+        patterns:
+          - "*"
