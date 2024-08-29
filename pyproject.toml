@@ -33,7 +33,7 @@ pytest-cov = "^5.0.0"
 [tool.poetry.group.lint.dependencies]
 pygobject-stubs = "^2.11.0"
 pyright = "^1.1.374"
-ruff = "^0.5.6"
+ruff = ">=0.5.6,<0.7.0"
 mypy = "^1.11.1"
 
 [tool.poetry.group.reuse]
