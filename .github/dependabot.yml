@@ -9,7 +9,7 @@ updates:
     schedule:
       interval: monthly
     groups:
-      all-devcontainers:
+      'all-devcontainers':
         patterns:
           - "*"
 
@@ -18,7 +18,7 @@ updates:
     schedule:
       interval: monthly
     groups:
-      all-github-actions:
+      'all-github-actions':
         patterns:
           - "*"
 
@@ -27,6 +27,6 @@ updates:
     schedule:
       interval: monthly
     groups:
-      all-pip:
+      'all-pip':
         patterns:
           - "*"
